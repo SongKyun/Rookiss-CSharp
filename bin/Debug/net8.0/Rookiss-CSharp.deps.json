@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Rookiss-CSharp/1.0.0": {
+        "runtime": {
+          "Rookiss-CSharp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Rookiss-CSharp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
