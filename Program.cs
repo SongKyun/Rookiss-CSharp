@@ -1,4 +1,6 @@
-﻿namespace Rookiss_CSharp;
+﻿using System.Threading.Channels;
+
+namespace Rookiss_CSharp;
 
 class Program
 {
@@ -15,14 +17,14 @@ class Program
         // [이름] = ?
         //hp = 100;
 
-        int hp = 100;
-        int maxHp;
+        //int hp = 100;
+        //int maxHp;
         
         // int hp = 100; 한번에
 
-        maxHp = hp;
+        //maxHp = hp;
         
-        Console.WriteLine(hp);
+        //Console.WriteLine(hp);
         
         // [100]
         // 완전히 정확하게 표현하지 않는 타입
@@ -51,13 +53,59 @@ class Program
         
         // 캐스팅
         // [        ] 큰
-        int a = 100;
+        //int a = 100;
         // [  ] 작은
-        short b = (short)a;
+        //short b = (short)a;
         
         // 실수 -> 인트 100->100.0f
-        float c = a;
+        //float c = a;
         // 50.5f->50
-        int d = (int)c; // 캐스팅 처리를 요구한다.
+        //int d = (int)c; // 캐스팅 처리를 요구한다.
+        
+        // string -> int
+        
+        //string input = Console.ReadLine();
+        
+        //int number = int.Parse(input);
+        
+        //Console.WriteLine(number);
+        
+        // int -> string
+        //int hp = 90;
+        //int maxHp = 100;
+        // 당신의 HP 는 ?? 입니다
+        //string message = "당신의 HP는 ??입니다.";
+        //Console.WriteLine(message);
+        // 이 방법은 하드 코딩
+        
+        //string message = string.Format(".당신의 HP는 {0}/{1} 입니다.", hp, maxHp);
+        //Console.WriteLine(message);
+        
+        // 캐스팅은 아니지만 더 깔끔하다
+        //string message = $"당신의 HP는 {hp} / {maxHp} 입니다";
+        //Console.WriteLine(message);
+        
+        // 3.33333333333
+        //int a = 10 / 3; // 3 * 3 + 1
+        //int b = 10 % 3;
+        //Console.WriteLine(a);
+        //Console.WriteLine(b);
+        
+        /*int hp = 100;
+        int maxhp = 100;
+        
+        bool fullhp = (hp == maxhp);
+        Console.WriteLine(fullhp);
+
+        bool isAlive = (hp > 0);
+        Console.WriteLine(isAlive);
+
+        int level = 10;
+        bool canEnterDungeon = (level <= 5);
+        Console.WriteLine(canEnterDungeon);*/
+        
+        // 논리연산
+        
+        
     }
 }
