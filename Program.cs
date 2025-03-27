@@ -1,4 +1,5 @@
 ﻿using System.Threading.Channels;
+using System.Xml.Schema;
 
 namespace Rookiss_CSharp;
 
@@ -35,11 +36,11 @@ class Program
 
         //a = 3.51234f; // 끝에 f를 붙여야 한다.
 
-        string name;
+        //string name;
         
-        name = "Rookiss";
+        //name = "Rookiss";
         
-        Console.WriteLine(name);
+        //Console.WriteLine(name);
 
         // 하나의 문자만 char C# 에선 2바이트로 영어,프랑스 등을 담기 가능하다.
         //char ch;
@@ -105,7 +106,129 @@ class Program
         Console.WriteLine(canEnterDungeon);*/
         
         // 논리연산
+
+        /*int hp = 0;
+        bool isDead = (hp <= 0);
+
+        if (isDead)
+        {
+            Console.WriteLine("Dead");
+        }
+        else
+        {
+            Console.WriteLine("Alive");
+        }
         
+        int choice = 0;
+        switch (choice)
+        {
+            case 0:
+                Console.WriteLine("How are you doing?");
+                break;
+            case 1:
+                break;
+        }*/
         
+        // 가위바위보 게임
+        /*Random rand  = new Random();
+        int aiChoice = rand.Next(0, 3);
+        
+        int choice = Convert.ToInt32(Console.ReadLine());
+        
+        switch (choice)
+        {
+            case 0:
+                Console.WriteLine("당신의 선택은 가위입니다.");
+                break;
+            case 1:
+                Console.WriteLine("당신의 선택은 바위");
+                break;
+            case 2:
+                Console.WriteLine("당신의 선택은 보");
+                break;
+        }
+
+        switch (aiChoice)
+        {
+            case 0:
+                Console.WriteLine("AI 선택은 가위입니다.");
+                break;
+            case 1:
+                Console.WriteLine("AI 선택은 바위");
+                break;
+            case 2:
+                Console.WriteLine("AI 선택은 보");
+                break;
+        }
+        
+        // 승리 무승부 패배
+        if (choice == 0)
+        {
+            if (aiChoice == 0)
+            {
+                Console.WriteLine("무승부");
+            }
+        }*/
+
+        /*int choice;
+        if (int.TryParse(Console.ReadLine(), out choice))
+        {
+            Console.WriteLine($"You chose {choice}.");
+        }
+        else
+        {
+            Console.WriteLine("Invalid input.");
+        }*/
+        
+        // 상수와 열거형
+        // 하드 코딩을 방지하기 위해 변수화 해줌
+        // switch-case에서는 변수를 넣어주려면 고정된 값 const으로 해줘야 사용이 가능하다.
+        
+        // 별개인 느낌인 상수화 보다는 통일감을 주는 열거형을 사용해준다
+        // enum Choice 인덱스 0부터 시작 하지만 명시적으로 지정 가능
+        /*{
+            Rock = 1,
+                Paper = 2,
+                    Scissors = 0
+        }*/
+        
+        // case (int)Choice.Rock 정수 타입이 아니라 enum 타입으로 정수로 변환해줘야 한다.
+        
+        // while, do while
+        /*int count = 5;
+        while (count > 0)
+        {
+            Console.WriteLine("Hello");
+            count--; // 무한 루프를 방지하는 조건
+        }*/
+        
+        // for 문 ( 초기화식; 조건식; 반복식; )
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
