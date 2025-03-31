@@ -5,6 +5,65 @@ namespace Rookiss_CSharp;
 
 class Program
 {
+    // 함수(메소드,프로시저 등)
+    /*static void HelloWorld()
+    {
+        Console.WriteLine("Hello World!");
+    }*/
+
+    /*static int Add(int a, int b)
+    {
+        int result = a + b;
+        return result;
+    }*/
+
+    /*static void AddOne(ref int number)
+    {
+        number = number + 1;
+    }
+
+    static int AddOne2(int number)
+    {
+        return number + 1;
+    }
+
+    static void swap(ref int a, ref int b)
+    {
+        int temp = a;
+        a = b;
+        b = temp;
+    }*/
+
+    /*static void Divide(int a, int b, out int result1, out int result2)
+    {
+        result1 = a / b;
+        result2 = a % b;
+    }*/
+    
+    // 오버로딩
+    /*static int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    static float Add(float a, float b)
+    {
+        return a + b;
+    }
+    
+    // int Add(int a, int b, int c = 0, float d = 1.0f) 옵션으로 자동으로 넣어지는데*/
+    
+    // 팩토리얼 메소드 구현
+    static int Factorial(int n)
+    {
+        int ret = 1;
+        for (int num = 1; num <= n; num++)
+        {
+            ret *= num;
+        }
+        return ret;
+    }
+    
     static void Main(string[] args)
     {
         // int 정수형
@@ -202,11 +261,96 @@ class Program
             count--; // 무한 루프를 방지하는 조건
         }*/
         
-        // for 문 ( 초기화식; 조건식; 반복식; )ddddd
+        // for 문 ( 초기화식; 조건식; 반복식; )
+
+        // break
+        /*int num = 97; // 1, 자신으로만 나뉘는 숫자 : 소수
+        
+        bool isPrime = true;
+        for (int i = 2; i < num; i++)
+        {
+            if ((num % i) == 0)
+            {
+                isPrime = false;
+                break; // 소수가 아닐경우 바로 멈춤
+            }
+        }
+        
+        if(isPrime)
+            Console.WriteLine("소수 입니다!");
+        else
+        {
+            Console.WriteLine("소수가 아닙니다!");
+        }*/
+
+        // continue
+        /*for (int i = 1; i <= 100; i++)
+        {
+            if((i % 3) != 0)
+                continue;
+                
+                Console.WriteLine($"3으로 나뉘는 숫자 : {i}");
+        }*/
+        
+        // 함수 호출
+        //HelloWorld(); // Program.HelloWorld();
+
+        /*int a = 4;
+        int b = 6;
+        int result = Add(b, a);
+        Console.WriteLine(result);*/
+
+        // ref
+        /*int a = 0;
+        Program.AddOne(ref a);
+        Console.WriteLine(a);
+
+        int b = Program.AddOne2(a);
+        a = b;
+        Console.WriteLine(a);*/
+
+        /*int num1 = 1;
+        int num2 = 2;
+        Program.swap(ref num1, ref num2);
+        Console.WriteLine(num1);
+        Console.WriteLine(num2);*/
+        
+        // out
+        /*int num1 = 10;
+        int num2 = 3;
+        
+        int result1, result2;
+        Divide(num1, num2, out result1, out result2);
+
+        Console.WriteLine($"Result1: {result1}");
+        Console.WriteLine($"Result2: {result2}");*/
+        
+        // 오버로딩
+        /*int ret = Program.Add(1, 2);
+        float ret2 = Program.Add(2.0f, 3.0f);*/
+        
+        // 연습문제
+        
+        // 구구단
+        for(int i = 2; i < 10; i++)
+        for(int j = 1; j < 10; j++)
+            Console.WriteLine($"{i} * {j} = {i * j}");
+        
+        // 별찍기
+        for (int i = 0; i < 5; i++)
+        {
+            for (int j = 0; j <= i; j++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+        
+        // 팩토리얼 메소드 구현
+        int ret = Factorial(5);
+        Console.WriteLine($"Factorial {ret}");
     }
 }
-
-
 
 
 
