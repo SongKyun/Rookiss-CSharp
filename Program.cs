@@ -1,4 +1,6 @@
-﻿using System.Threading.Channels;
+﻿// 개론, 데이터 갖고놀기, 코드 흐름 제어
+/*
+using System.Threading.Channels;
 using System.Xml.Schema;
 
 namespace Rookiss_CSharp;
@@ -9,13 +11,13 @@ class Program
     /*static void HelloWorld()
     {
         Console.WriteLine("Hello World!");
-    }*/
+    }#1#
 
     /*static int Add(int a, int b)
     {
         int result = a + b;
         return result;
-    }*/
+    }#1#
 
     /*static void AddOne(ref int number)
     {
@@ -32,13 +34,13 @@ class Program
         int temp = a;
         a = b;
         b = temp;
-    }*/
+    }#1#
 
     /*static void Divide(int a, int b, out int result1, out int result2)
     {
         result1 = a / b;
         result2 = a % b;
-    }*/
+    }#1#
     
     // 오버로딩
     /*static int Add(int a, int b)
@@ -51,7 +53,7 @@ class Program
         return a + b;
     }
     
-    // int Add(int a, int b, int c = 0, float d = 1.0f) 옵션으로 자동으로 넣어지는데*/
+    // int Add(int a, int b, int c = 0, float d = 1.0f) 옵션으로 자동으로 넣어지는데#1#
     
     // 팩토리얼 메소드 구현
     static int Factorial(int n)
@@ -162,7 +164,7 @@ class Program
 
         int level = 10;
         bool canEnterDungeon = (level <= 5);
-        Console.WriteLine(canEnterDungeon);*/
+        Console.WriteLine(canEnterDungeon);#1#
         
         // 논리연산
 
@@ -186,7 +188,7 @@ class Program
                 break;
             case 1:
                 break;
-        }*/
+        }#1#
         
         // 가위바위보 게임
         /*Random rand  = new Random();
@@ -227,7 +229,7 @@ class Program
             {
                 Console.WriteLine("무승부");
             }
-        }*/
+        }#1#
 
         /*int choice;
         if (int.TryParse(Console.ReadLine(), out choice))
@@ -237,7 +239,7 @@ class Program
         else
         {
             Console.WriteLine("Invalid input.");
-        }*/
+        }#1#
         
         // 상수와 열거형
         // 하드 코딩을 방지하기 위해 변수화 해줌
@@ -249,7 +251,7 @@ class Program
             Rock = 1,
                 Paper = 2,
                     Scissors = 0
-        }*/
+        }#1#
         
         // case (int)Choice.Rock 정수 타입이 아니라 enum 타입으로 정수로 변환해줘야 한다.
         
@@ -259,7 +261,7 @@ class Program
         {
             Console.WriteLine("Hello");
             count--; // 무한 루프를 방지하는 조건
-        }*/
+        }#1#
         
         // for 문 ( 초기화식; 조건식; 반복식; )
 
@@ -281,7 +283,7 @@ class Program
         else
         {
             Console.WriteLine("소수가 아닙니다!");
-        }*/
+        }#1#
 
         // continue
         /*for (int i = 1; i <= 100; i++)
@@ -290,7 +292,7 @@ class Program
                 continue;
                 
                 Console.WriteLine($"3으로 나뉘는 숫자 : {i}");
-        }*/
+        }#1#
         
         // 함수 호출
         //HelloWorld(); // Program.HelloWorld();
@@ -298,7 +300,7 @@ class Program
         /*int a = 4;
         int b = 6;
         int result = Add(b, a);
-        Console.WriteLine(result);*/
+        Console.WriteLine(result);#1#
 
         // ref
         /*int a = 0;
@@ -307,13 +309,13 @@ class Program
 
         int b = Program.AddOne2(a);
         a = b;
-        Console.WriteLine(a);*/
+        Console.WriteLine(a);#1#
 
         /*int num1 = 1;
         int num2 = 2;
         Program.swap(ref num1, ref num2);
         Console.WriteLine(num1);
-        Console.WriteLine(num2);*/
+        Console.WriteLine(num2);#1#
         
         // out
         /*int num1 = 10;
@@ -323,11 +325,11 @@ class Program
         Divide(num1, num2, out result1, out result2);
 
         Console.WriteLine($"Result1: {result1}");
-        Console.WriteLine($"Result2: {result2}");*/
+        Console.WriteLine($"Result2: {result2}");#1#
         
         // 오버로딩
         /*int ret = Program.Add(1, 2);
-        float ret2 = Program.Add(2.0f, 3.0f);*/
+        float ret2 = Program.Add(2.0f, 3.0f);#1#
         
         // 연습문제
         
@@ -351,28 +353,4 @@ class Program
         Console.WriteLine($"Factorial {ret}");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
