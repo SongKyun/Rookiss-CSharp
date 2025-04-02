@@ -145,7 +145,7 @@ namespace Rookiss_CSharp
             // 랜덤으로 1~3 몬스터 중 하나를 리스폰
         }
 
-        static void Fight(Player player, Monster monster) // 원본값을 받아와야 하는데 복사본을 사용 중이다
+        static void Fight(ref Player player, ref Monster monster) // 원본값을 받아와야 하는데 복사본을 사용 중이다 그래서 ref로 받아옴
         {
             while (true)
             {
@@ -154,6 +154,8 @@ namespace Rookiss_CSharp
                 if (monster.hp <= 0)
                 {
                     Console.WriteLine("승리");
+                    Console.WriteLine($"남은 체력 : {player.hp}");
+                    break;
                 }
                 
                 // 몬스터 반격
@@ -161,11 +163,12 @@ namespace Rookiss_CSharp
                 if (player.hp <= 0)
                 {
                     Console.WriteLine("패배");
+                    break;
                 }
             }
         }
         
-        static void EnterField(Player player) // player 전달 받음
+        static void EnterField(ref Player player) // player 전달 받음
         {
             while (true)
             {
@@ -184,16 +187,26 @@ namespace Rookiss_CSharp
                 string input = Console.ReadLine();
                 if (input == "1")
                 {
-                    //Fight(player, monster); // player 정보를 최종적으로 전달
+                    Fight(ref player, ref monster); // player 정보를 최종적으로 전달
                 }
                 else if (input == "2")
                 {
-                    
+                    Random rand = new Random();
+                    int randValue = rand.Next(0, 101);
+                    if (randValue <= 33)
+                    {
+                        Console.WriteLine("도망 성공");
+                        break;
+                    }
+                    else
+                    {
+                        Fight(ref player, ref monster);
+                    }
                 }
             }
         }
         
-        static void EnterGame(Player player) // player 정보를 받아줌
+        static void EnterGame(ref Player player) // player 정보를 받아줌
         {
             while (true)
             {
@@ -205,7 +218,7 @@ namespace Rookiss_CSharp
                 switch (input)
                 {
                     case "1":
-                        EnterField(player); // player 전달
+                        EnterField(ref player); // player 전달
                         break; // switch 문의 break는 
                     case "2":
                         return;
@@ -238,9 +251,7 @@ namespace Rookiss_CSharp
                     // 캐릭터 생성 Player는 C#에서 제공되는 타입
                     Player player;
                     CreatePlayer(choice, out player);
-                    
-                    EnterGame(player); // player 정보를 넘겨줌
-
+                    EnterGame(ref player); // player 정보를 넘겨줌
                     Console.WriteLine($"HP{player.hp} Attack{player.attack}");
                 }
             }
